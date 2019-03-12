@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form method="get" action="/greeting">
+        <input name="say" type="text">
+        <input name="to" type="text">
+        <button>SUBMIT</button>
+    </form>
+</div>
+<div>
+    <input id="say" placeholder="인사말">
+    <input id="to" placeholder="대상자">
+    <button onclick="send()">SUBMIT</button>
+    <script>
+        function send() {
+            //$("input")[3]                     태그
+            //$(".css-class-selector")[0]       클래스
+            //$("#say")                         아이디(배열X)
+
+            let say = $("#say").val();
+            let to = $("#to").val();
+
+            window.location.href = "greeting1/" + say + "/" + to;
+
+        }
+    </script>
+</div>
+</body>
+</html>
